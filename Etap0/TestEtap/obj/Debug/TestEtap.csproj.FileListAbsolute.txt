@@ -1,0 +1,11 @@
+C:\studia\TPW\repo\TPW\Etap0\TestEtap\bin\Debug\TestEtap.dll
+C:\studia\TPW\repo\TPW\Etap0\TestEtap\bin\Debug\TestEtap.pdb
+C:\studia\TPW\repo\TPW\Etap0\TestEtap\bin\Debug\Etap0.exe
+C:\studia\TPW\repo\TPW\Etap0\TestEtap\bin\Debug\nunit.framework.dll
+C:\studia\TPW\repo\TPW\Etap0\TestEtap\bin\Debug\Etap0.pdb
+C:\studia\TPW\repo\TPW\Etap0\TestEtap\bin\Debug\nunit.framework.xml
+C:\studia\TPW\repo\TPW\Etap0\TestEtap\obj\Debug\TestEtap.csproj.AssemblyReference.cache
+C:\studia\TPW\repo\TPW\Etap0\TestEtap\obj\Debug\TestEtap.csproj.CoreCompileInputs.cache
+C:\studia\TPW\repo\TPW\Etap0\TestEtap\obj\Debug\TestEtap.csproj.CopyComplete
+C:\studia\TPW\repo\TPW\Etap0\TestEtap\obj\Debug\TestEtap.dll
+C:\studia\TPW\repo\TPW\Etap0\TestEtap\obj\Debug\TestEtap.pdb
