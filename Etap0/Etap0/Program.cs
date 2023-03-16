@@ -7,20 +7,16 @@ namespace Calc
 {
     public class Kalkulator 
     {
-        public double Dodawanie(double n1, double n2)
+        public double Dodawanie(params int[] tab)
         {
-            return n1 + n2;
-        }
+            int suma = 0;
+            foreach (var n1 in tab)
+            {
+                suma += n1;
+            }
 
-        public double Dodawanie(double n1, double n2, double n3)
-        {
-            return n1 + n2 + n3;
+            return suma;
         }
-        public double Dodawanie(double n1, double n2, double n3, double n4)
-        {
-            return n1 + n2 + n3 + n4;
-        }
-
 
         public double Odejmowanie(double n1, double n2)
         {
@@ -67,6 +63,8 @@ namespace Etap0
             Console.WriteLine(kalkulator.Dodawanie(1,2,3,4));
             Console.WriteLine(kalkulator.Potegowanie(2,15));
             Console.WriteLine(kalkulator.Dzielene(3,5));
+            Console.WriteLine(kalkulator.Dodawanie(1,2,3,4,5,6));
+            
         }
     }
 }
