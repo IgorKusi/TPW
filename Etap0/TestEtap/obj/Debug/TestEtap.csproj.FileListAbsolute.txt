@@ -9,3 +9,14 @@ C:\studia\TPW\repo\TPW\Etap0\TestEtap\obj\Debug\TestEtap.csproj.CoreCompileInput
 C:\studia\TPW\repo\TPW\Etap0\TestEtap\obj\Debug\TestEtap.csproj.CopyComplete
 C:\studia\TPW\repo\TPW\Etap0\TestEtap\obj\Debug\TestEtap.dll
 C:\studia\TPW\repo\TPW\Etap0\TestEtap\obj\Debug\TestEtap.pdb
+D:\TPW\Etap0\TestEtap\bin\Debug\TestEtap.dll
+D:\TPW\Etap0\TestEtap\bin\Debug\TestEtap.pdb
+D:\TPW\Etap0\TestEtap\bin\Debug\Etap0.exe
+D:\TPW\Etap0\TestEtap\bin\Debug\nunit.framework.dll
+D:\TPW\Etap0\TestEtap\bin\Debug\Etap0.pdb
+D:\TPW\Etap0\TestEtap\bin\Debug\nunit.framework.xml
+D:\TPW\Etap0\TestEtap\obj\Debug\TestEtap.csproj.AssemblyReference.cache
+D:\TPW\Etap0\TestEtap\obj\Debug\TestEtap.csproj.CoreCompileInputs.cache
+D:\TPW\Etap0\TestEtap\obj\Debug\TestEtap.csproj.CopyComplete
+D:\TPW\Etap0\TestEtap\obj\Debug\TestEtap.dll
+D:\TPW\Etap0\TestEtap\obj\Debug\TestEtap.pdb

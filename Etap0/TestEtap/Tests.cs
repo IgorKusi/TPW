@@ -10,7 +10,7 @@ namespace TestEtap
         [Test]
         public void Test1()
         {
-            Kalkulator kalkulator = new Kalkulator();
+            var kalkulator = new Kalkulator();
             Assert.True(kalkulator.Dodawanie(1, 2, 3, 4) == 10); ;
             Assert.True(kalkulator.Dodawanie(5,5) == 10);
             Assert.True(kalkulator.Potegowanie(2, 10) == 1024);

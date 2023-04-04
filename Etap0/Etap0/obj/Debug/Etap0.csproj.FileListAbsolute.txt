@@ -5,3 +5,10 @@ C:\studia\TPW\repo\TPW\Etap0\Etap0\bin\Debug\Etap0.exe
 C:\studia\TPW\repo\TPW\Etap0\Etap0\bin\Debug\Etap0.pdb
 C:\studia\TPW\repo\TPW\Etap0\Etap0\obj\Debug\Etap0.exe
 C:\studia\TPW\repo\TPW\Etap0\Etap0\obj\Debug\Etap0.pdb
+D:\TPW\Etap0\Etap0\obj\Debug\Etap0.exe
+D:\TPW\Etap0\Etap0\obj\Debug\Etap0.pdb
+D:\TPW\Etap0\Etap0\bin\Debug\Etap0.exe
+D:\TPW\Etap0\Etap0\bin\Debug\Etap0.pdb
+D:\TPW\Etap0\Etap0\obj\Debug\Etap0.csproj.AssemblyReference.cache
+D:\TPW\Etap0\Etap0\obj\Debug\Etap0.csproj.SuggestedBindingRedirects.cache
+D:\TPW\Etap0\Etap0\obj\Debug\Etap0.csproj.CoreCompileInputs.cache

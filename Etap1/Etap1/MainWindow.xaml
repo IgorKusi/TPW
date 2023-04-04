@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize">
     <Grid>
-        <Button Content="PLAY" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Height="39" Width="100" />
-        <Button Content="RESET" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Height="40" Width="100" />
-        <Slider HorizontalAlignment="Left" Margin="-107,269,0,0" VerticalAlignment="Top" Width="336" RenderTransformOrigin="0.5,0.5" Height="20" Minimum="1" Maximum="30" IsSnapToTickEnabled="True" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="0">
+        <Button Content="PLAY" Margin="685,8,15,0" VerticalAlignment="Top" Height="39" />
+        <Button Content="RESET" Margin="685,62,15,0" VerticalAlignment="Top" Height="40" />
+        <Slider Margin="604,300,-66,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="20" Minimum="1" Maximum="30" IsSnapToTickEnabled="True" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="0">
             <Slider.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -19,6 +19,7 @@
                 </TransformGroup>
             </Slider.RenderTransform>
         </Slider>
-        <Rectangle Height="484" Margin="120,0,0,0" Stroke="Black" VerticalAlignment="Top" Uid="Map"/>
+        <Rectangle Height="484" Margin="0,0,120,0" Stroke="Black" VerticalAlignment="Top" Uid="Map"/>
+        <Button Content="FRAME" Margin="685,118,15,0" VerticalAlignment="Top" Height="40" />
     </Grid>
 </Window>

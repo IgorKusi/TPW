@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\igor\\source\\repos\\Etap1\\Dane\\Dane.csproj": {}
+    "D:\\TPW\\Etap1\\Dane\\Dane.csproj": {}
   },
   "projects": {
-    "C:\\Users\\igor\\source\\repos\\Etap1\\Dane\\Dane.csproj": {
+    "D:\\TPW\\Etap1\\Dane\\Dane.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\igor\\source\\repos\\Etap1\\Dane\\Dane.csproj",
+        "projectUniqueName": "D:\\TPW\\Etap1\\Dane\\Dane.csproj",
         "projectName": "Dane",
-        "projectPath": "C:\\Users\\igor\\source\\repos\\Etap1\\Dane\\Dane.csproj",
-        "packagesPath": "C:\\Users\\igor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\igor\\source\\repos\\Etap1\\Dane\\obj\\",
+        "projectPath": "D:\\TPW\\Etap1\\Dane\\Dane.csproj",
+        "packagesPath": "C:\\Users\\cheily\\.nuget\\packages\\",
+        "outputPath": "D:\\TPW\\Etap1\\Dane\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\igor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cheily\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

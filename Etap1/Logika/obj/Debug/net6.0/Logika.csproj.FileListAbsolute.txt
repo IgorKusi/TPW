@@ -1,0 +1,15 @@
+D:\TPW\Etap1\Logika\bin\Debug\net6.0\Logika.deps.json
+D:\TPW\Etap1\Logika\bin\Debug\net6.0\Logika.dll
+D:\TPW\Etap1\Logika\bin\Debug\net6.0\Logika.pdb
+D:\TPW\Etap1\Logika\bin\Debug\net6.0\Dane.dll
+D:\TPW\Etap1\Logika\bin\Debug\net6.0\Dane.pdb
+D:\TPW\Etap1\Logika\obj\Debug\net6.0\Logika.csproj.AssemblyReference.cache
+D:\TPW\Etap1\Logika\obj\Debug\net6.0\Logika.GeneratedMSBuildEditorConfig.editorconfig
+D:\TPW\Etap1\Logika\obj\Debug\net6.0\Logika.AssemblyInfoInputs.cache
+D:\TPW\Etap1\Logika\obj\Debug\net6.0\Logika.AssemblyInfo.cs
+D:\TPW\Etap1\Logika\obj\Debug\net6.0\Logika.csproj.CoreCompileInputs.cache
+D:\TPW\Etap1\Logika\obj\Debug\net6.0\Logika.csproj.CopyComplete
+D:\TPW\Etap1\Logika\obj\Debug\net6.0\Logika.dll
+D:\TPW\Etap1\Logika\obj\Debug\net6.0\refint\Logika.dll
+D:\TPW\Etap1\Logika\obj\Debug\net6.0\Logika.pdb
+D:\TPW\Etap1\Logika\obj\Debug\net6.0\ref\Logika.dll

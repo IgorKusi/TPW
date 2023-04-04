@@ -1,26 +1,50 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Dane/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Dane.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dane.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Dane/1.0.0": {
+      "type": "project",
+      "path": "../Dane/Dane.csproj",
+      "msbuildProject": "../Dane/Dane.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Dane >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\igor\\.nuget\\packages\\": {}
+    "C:\\Users\\cheily\\.nuget\\packages\\": {},
+    "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\igor\\source\\repos\\Etap1\\Logika\\Logika.csproj",
+      "projectUniqueName": "D:\\TPW\\Etap1\\Logika\\Logika.csproj",
       "projectName": "Logika",
-      "projectPath": "C:\\Users\\igor\\source\\repos\\Etap1\\Logika\\Logika.csproj",
-      "packagesPath": "C:\\Users\\igor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\igor\\source\\repos\\Etap1\\Logika\\obj\\",
+      "projectPath": "D:\\TPW\\Etap1\\Logika\\Logika.csproj",
+      "packagesPath": "C:\\Users\\cheily\\.nuget\\packages\\",
+      "outputPath": "D:\\TPW\\Etap1\\Logika\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\igor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cheily\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +57,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\TPW\\Etap1\\Dane\\Dane.csproj": {
+              "projectPath": "D:\\TPW\\Etap1\\Dane\\Dane.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -61,7 +89,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
