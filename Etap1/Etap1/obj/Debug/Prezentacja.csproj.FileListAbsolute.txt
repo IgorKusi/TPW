@@ -1,0 +1,16 @@
+C:\Users\igor\source\repos\Etap1\Etap1\obj\Debug\Prezentacja.csproj.AssemblyReference.cache
+C:\Users\igor\source\repos\Etap1\Etap1\obj\Debug\Prezentacja.csproj.SuggestedBindingRedirects.cache
+C:\Users\igor\source\repos\Etap1\Etap1\obj\Debug\MainWindow.g.cs
+C:\Users\igor\source\repos\Etap1\Etap1\obj\Debug\App.g.cs
+C:\Users\igor\source\repos\Etap1\Etap1\obj\Debug\Etap1_MarkupCompile.cache
+C:\Users\igor\source\repos\Etap1\Etap1\obj\Debug\Etap1_MarkupCompile.lref
+C:\Users\igor\source\repos\Etap1\Etap1\obj\Debug\Etap1.exe
+C:\Users\igor\source\repos\Etap1\Etap1\obj\Debug\Etap1.pdb
+C:\Users\igor\source\repos\Etap1\Etap1\bin\Debug\Etap1.exe.config
+C:\Users\igor\source\repos\Etap1\Etap1\bin\Debug\Etap1.exe
+C:\Users\igor\source\repos\Etap1\Etap1\bin\Debug\Etap1.pdb
+C:\Users\igor\source\repos\Etap1\Etap1\obj\Debug\MainWindow.baml
+C:\Users\igor\source\repos\Etap1\Etap1\obj\Debug\Etap1.g.resources
+C:\Users\igor\source\repos\Etap1\Etap1\obj\Debug\Etap1.Properties.Resources.resources
+C:\Users\igor\source\repos\Etap1\Etap1\obj\Debug\Prezentacja.csproj.GenerateResource.cache
+C:\Users\igor\source\repos\Etap1\Etap1\obj\Debug\Prezentacja.csproj.CoreCompileInputs.cache
