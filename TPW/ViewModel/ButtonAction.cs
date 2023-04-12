@@ -10,7 +10,7 @@ namespace ViewModel {
 
         public bool CanExecute(object? parameter) => true;
 
-        public void Execute(object? parameter) => this._action();
+        public void Execute(object? parameter) => _action();
 
 
 

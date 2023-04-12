@@ -52,11 +52,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TPWfrfr\\TPW\\Model\\Model.csproj",
+      "projectUniqueName": "D:\\TPW\\TPW\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "D:\\TPWfrfr\\TPW\\Model\\Model.csproj",
+      "projectPath": "D:\\TPW\\TPW\\Model\\Model.csproj",
       "packagesPath": "C:\\Users\\cheily\\.nuget\\packages\\",
-      "outputPath": "D:\\TPWfrfr\\TPW\\Model\\obj\\",
+      "outputPath": "D:\\TPW\\TPW\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -78,11 +78,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\TPWfrfr\\TPW\\Dane\\Dane.csproj": {
-              "projectPath": "D:\\TPWfrfr\\TPW\\Dane\\Dane.csproj"
+            "D:\\TPW\\TPW\\Dane\\Dane.csproj": {
+              "projectPath": "D:\\TPW\\TPW\\Dane\\Dane.csproj"
             },
-            "D:\\TPWfrfr\\TPW\\Logika\\Logika.csproj": {
-              "projectPath": "D:\\TPWfrfr\\TPW\\Logika\\Logika.csproj"
+            "D:\\TPW\\TPW\\Logika\\Logika.csproj": {
+              "projectPath": "D:\\TPW\\TPW\\Logika\\Logika.csproj"
             }
           }
         }

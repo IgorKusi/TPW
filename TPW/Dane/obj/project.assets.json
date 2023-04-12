@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TPWfrfr\\TPW\\Dane\\Dane.csproj",
+      "projectUniqueName": "D:\\TPW\\TPW\\Dane\\Dane.csproj",
       "projectName": "Dane",
-      "projectPath": "D:\\TPWfrfr\\TPW\\Dane\\Dane.csproj",
+      "projectPath": "D:\\TPW\\TPW\\Dane\\Dane.csproj",
       "packagesPath": "C:\\Users\\cheily\\.nuget\\packages\\",
-      "outputPath": "D:\\TPWfrfr\\TPW\\Dane\\obj\\",
+      "outputPath": "D:\\TPW\\TPW\\Dane\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"

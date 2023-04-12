@@ -16,8 +16,18 @@ namespace Model {
             ball.PropertyChanged += RelayBallUpdate;
         }
 
-        public Dane.Ball Ball { get; }
+        public Ball Ball { get; }
         public int Radius { get; }
+
+        public double X {
+            get => Ball.X;
+            set => Ball.X = value;
+        }
+        public double Y {
+            get => Ball.Y;
+            set => Ball.Y = value;
+        }
+
 
 
         private void RelayBallUpdate(object? source, PropertyChangedEventArgs args) {

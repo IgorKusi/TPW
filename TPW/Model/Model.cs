@@ -1,42 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using Dane;
 using Logika;
 
 namespace Model {
     public class Model {
         public Model(int numBalls, int mapX, int mapY) {
-            BallRadius = 50;
-            _circles = new ObservableCollection<Circle>();
+            BallRadius = 15;
+            Circles = new ObservableCollection<Circle>();
             Map = new Map(mapX, mapY);
 
             for ( var i = 0; i < numBalls; i++ ) {
-                _circles.Add(Circle.GetCircle(Map, BallRadius));
+                Circles.Add(Circle.GetCircle(Map, BallRadius));
             }
         }
 
+        private readonly ManualResetEvent _mre = new(false);
         public int BallRadius { get; }
 
-        private ObservableCollection<Circle> _circles;
-        public ObservableCollection<Circle> Circles => _circles;
+        private bool _enabled;
+        public bool Enabled {
+            get => _enabled;
+            set {
+                _enabled = value;
+                if ( _enabled ) _mre.Set();
+                else _mre.Reset();
+            }
+        }
+
+        public ObservableCollection<Circle> Circles { get; }
+
         public Map Map { get; }
         private List<Thread> _threads = new();
 
         public void Start() {
+            Enabled = true;
+
             for ( var i = 0; i < Circles.Count; i++ ) {
                 var circle = Circles[ i ];
                 Thread t = new(() => {
                     while ( true ) {
-                        BallManager.UpdateBallPos(circle.Ball);
-
                         try {
-                            Thread.Sleep(500);
+                            _mre.WaitOne();
+                            BallManager.UpdateBallPos(circle.Ball);
+
+                            Thread.Sleep(5);
                         } catch ( ThreadInterruptedException e ) {
-                            break;
+                            return;
                         }
                     }
                 });
@@ -51,6 +60,8 @@ namespace Model {
             foreach ( var thread in _threads ) {
                 thread.Interrupt();
             }
+            Enabled = false;
+            _threads.Clear();
         }
 
     }

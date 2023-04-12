@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D8ZAPylpYjjEunNQaqhbSxKIYKp1S/2fAAna2IR8qpO6tzVf6iPtDeWLuJe8c4IXsIjTOsU40LZxI6yXic7ytw==",
+  "dgSpecHash": "yt+dGn9qJczbW90kDNG9ms0P1eMvCooO7R0/cb34oBnzv1o5xzyMSbLCgIRW4VhXsSQDYm0EJY83elR39x4d9w==",
   "success": true,
-  "projectFilePath": "D:\\TPWfrfr\\TPW\\Testy\\Testy.csproj",
+  "projectFilePath": "D:\\TPW\\TPW\\Testy\\Testy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cheily\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\cheily\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",

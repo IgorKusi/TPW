@@ -1,12 +1,9 @@
-﻿using System;
-
-namespace Logika {
+﻿namespace Logika {
     public class ThreadSafeRandom {
         private static readonly Random _global = new();
         [ThreadStatic] private static Random? _local;
 
-        public static int Next(int? maxVal = null)
-        {
+        public static int Next(int? maxVal = null) {
             if ( _local == null ) {
                 int seed;
                 lock ( _global ) {

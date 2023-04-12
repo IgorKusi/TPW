@@ -1,13 +1,11 @@
-﻿using System;
-using System.ComponentModel;
-using System.Numerics;
+﻿using System.ComponentModel;
 
 namespace Dane {
     public class Ball : INotifyPropertyChanged {
-        private int _x;
-        private int _y;
+        private double _x;
+        private double _y;
 
-        public Ball(int x, int y, int xSpeed, int ySpeed) {
+        public Ball(double x, double y, double xSpeed, double ySpeed) {
             X = x;
             Y = y;
             XSpeed = xSpeed;
@@ -15,7 +13,7 @@ namespace Dane {
         }
 
 
-        public int X {
+        public double X {
             get => _x;
             set {
                 _x = value;
@@ -23,7 +21,7 @@ namespace Dane {
             }
         }
 
-        public int Y {
+        public double Y {
             get => _y;
             set {
                 _y = value;
@@ -31,8 +29,8 @@ namespace Dane {
             }
         }
 
-        public int XSpeed { get; set; }
-        public int YSpeed { get; set; }
+        public double XSpeed { get; set; }
+        public double YSpeed { get; set; }
 
 
         public event PropertyChangedEventHandler? PropertyChanged;

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-
-namespace Dane {
+﻿namespace Dane {
     public class Map {
         public Map(int xSize, int ySize) {
             XSize = xSize;
@@ -20,6 +16,6 @@ namespace Dane {
         public void AddBall(Ball ball) {
             _balls.Add(ball);
         }
-        
+
     }
 }

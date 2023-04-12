@@ -6737,11 +6737,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TPWfrfr\\TPW\\Testy\\Testy.csproj",
+      "projectUniqueName": "D:\\TPW\\TPW\\Testy\\Testy.csproj",
       "projectName": "Testy",
-      "projectPath": "D:\\TPWfrfr\\TPW\\Testy\\Testy.csproj",
+      "projectPath": "D:\\TPW\\TPW\\Testy\\Testy.csproj",
       "packagesPath": "C:\\Users\\cheily\\.nuget\\packages\\",
-      "outputPath": "D:\\TPWfrfr\\TPW\\Testy\\obj\\",
+      "outputPath": "D:\\TPW\\TPW\\Testy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6763,17 +6763,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\TPWfrfr\\TPW\\Dane\\Dane.csproj": {
-              "projectPath": "D:\\TPWfrfr\\TPW\\Dane\\Dane.csproj"
+            "D:\\TPW\\TPW\\Dane\\Dane.csproj": {
+              "projectPath": "D:\\TPW\\TPW\\Dane\\Dane.csproj"
             },
-            "D:\\TPWfrfr\\TPW\\Logika\\Logika.csproj": {
-              "projectPath": "D:\\TPWfrfr\\TPW\\Logika\\Logika.csproj"
+            "D:\\TPW\\TPW\\Logika\\Logika.csproj": {
+              "projectPath": "D:\\TPW\\TPW\\Logika\\Logika.csproj"
             },
-            "D:\\TPWfrfr\\TPW\\Model\\Model.csproj": {
-              "projectPath": "D:\\TPWfrfr\\TPW\\Model\\Model.csproj"
+            "D:\\TPW\\TPW\\Model\\Model.csproj": {
+              "projectPath": "D:\\TPW\\TPW\\Model\\Model.csproj"
             },
-            "D:\\TPWfrfr\\TPW\\ViewModel\\ViewModel.csproj": {
-              "projectPath": "D:\\TPWfrfr\\TPW\\ViewModel\\ViewModel.csproj"
+            "D:\\TPW\\TPW\\ViewModel\\ViewModel.csproj": {
+              "projectPath": "D:\\TPW\\TPW\\ViewModel\\ViewModel.csproj"
             }
           }
         }

@@ -88,11 +88,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TPWfrfr\\TPW\\View\\View.csproj",
+      "projectUniqueName": "D:\\TPW\\TPW\\View\\View.csproj",
       "projectName": "View",
-      "projectPath": "D:\\TPWfrfr\\TPW\\View\\View.csproj",
+      "projectPath": "D:\\TPW\\TPW\\View\\View.csproj",
       "packagesPath": "C:\\Users\\cheily\\.nuget\\packages\\",
-      "outputPath": "D:\\TPWfrfr\\TPW\\View\\obj\\",
+      "outputPath": "D:\\TPW\\TPW\\View\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -114,8 +114,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\TPWfrfr\\TPW\\ViewModel\\ViewModel.csproj": {
-              "projectPath": "D:\\TPWfrfr\\TPW\\ViewModel\\ViewModel.csproj"
+            "D:\\TPW\\TPW\\ViewModel\\ViewModel.csproj": {
+              "projectPath": "D:\\TPW\\TPW\\ViewModel\\ViewModel.csproj"
             }
           }
         }
