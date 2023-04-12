@@ -1,0 +1,12 @@
+D:\TPWfrfr\TPW\Dane\bin\Debug\net6.0\Dane.deps.json
+D:\TPWfrfr\TPW\Dane\bin\Debug\net6.0\Dane.dll
+D:\TPWfrfr\TPW\Dane\bin\Debug\net6.0\Dane.pdb
+D:\TPWfrfr\TPW\Dane\obj\Debug\net6.0\Dane.csproj.AssemblyReference.cache
+D:\TPWfrfr\TPW\Dane\obj\Debug\net6.0\Dane.GeneratedMSBuildEditorConfig.editorconfig
+D:\TPWfrfr\TPW\Dane\obj\Debug\net6.0\Dane.AssemblyInfoInputs.cache
+D:\TPWfrfr\TPW\Dane\obj\Debug\net6.0\Dane.AssemblyInfo.cs
+D:\TPWfrfr\TPW\Dane\obj\Debug\net6.0\Dane.csproj.CoreCompileInputs.cache
+D:\TPWfrfr\TPW\Dane\obj\Debug\net6.0\Dane.dll
+D:\TPWfrfr\TPW\Dane\obj\Debug\net6.0\refint\Dane.dll
+D:\TPWfrfr\TPW\Dane\obj\Debug\net6.0\Dane.pdb
+D:\TPWfrfr\TPW\Dane\obj\Debug\net6.0\ref\Dane.dll

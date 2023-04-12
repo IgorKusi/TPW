@@ -1,0 +1,155 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "Dane/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Dane.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dane.dll": {}
+        }
+      },
+      "Logika/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Dane": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Logika.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Logika.dll": {}
+        }
+      },
+      "Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Dane": "1.0.0",
+          "Logika": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Model.dll": {}
+        }
+      },
+      "ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ViewModel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Dane/1.0.0": {
+      "type": "project",
+      "path": "../Dane/Dane.csproj",
+      "msbuildProject": "../Dane/Dane.csproj"
+    },
+    "Logika/1.0.0": {
+      "type": "project",
+      "path": "../Logika/Logika.csproj",
+      "msbuildProject": "../Logika/Logika.csproj"
+    },
+    "Model/1.0.0": {
+      "type": "project",
+      "path": "../Model/Model.csproj",
+      "msbuildProject": "../Model/Model.csproj"
+    },
+    "ViewModel/1.0.0": {
+      "type": "project",
+      "path": "../ViewModel/ViewModel.csproj",
+      "msbuildProject": "../ViewModel/ViewModel.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "ViewModel >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\cheily\\.nuget\\packages\\": {},
+    "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\TPWfrfr\\TPW\\View\\View.csproj",
+      "projectName": "View",
+      "projectPath": "D:\\TPWfrfr\\TPW\\View\\View.csproj",
+      "packagesPath": "C:\\Users\\cheily\\.nuget\\packages\\",
+      "outputPath": "D:\\TPWfrfr\\TPW\\View\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\cheily\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {
+            "D:\\TPWfrfr\\TPW\\ViewModel\\ViewModel.csproj": {
+              "projectPath": "D:\\TPWfrfr\\TPW\\ViewModel\\ViewModel.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
