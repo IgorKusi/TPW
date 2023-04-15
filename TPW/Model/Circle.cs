@@ -2,42 +2,42 @@
 using Dane;
 using Logika;
 
-namespace Model {
-    public class Circle : INotifyPropertyChanged {
-        public static Circle GetCircle(Map forMap, int radius) {
-            var b = BallManager.GenerateBall(forMap);
-            return new Circle(b, radius);
-        }
+namespace Model; 
 
-        private Circle(Ball ball, int radius) {
-            Ball = ball;
-            Radius = radius;
+public sealed class Circle : INotifyPropertyChanged {
+    public static Circle GetCircle(Map forMap, int radius) {
+        var b = BallManager.GenerateBall(forMap, radius);
+        return new Circle(b);
+    }
 
-            ball.PropertyChanged += RelayBallUpdate;
-        }
+    public Circle(Ball ball) {
+        Ball = ball;
+        Radius = ball.Radius;
 
-        public Ball Ball { get; }
-        public int Radius { get; }
+        ball.PropertyChanged += RelayBallUpdate;
+    }
 
-        public double X {
-            get => Ball.X;
-            set => Ball.X = value;
-        }
-        public double Y {
-            get => Ball.Y;
-            set => Ball.Y = value;
-        }
+    public Ball Ball { get; }
+    public int Radius { get; }
+
+    public double X {
+        get => Ball.X;
+        set => Ball.X = value;
+    }
+
+    public double Y {
+        get => Ball.Y;
+        set => Ball.Y = value;
+    }
 
 
+    private void RelayBallUpdate(object? source, PropertyChangedEventArgs args) {
+        this.OnPropertyChanged(args);
+    }
 
-        private void RelayBallUpdate(object? source, PropertyChangedEventArgs args) {
-            this.OnPropertyChanged(args);
-        }
+    public event PropertyChangedEventHandler? PropertyChanged;
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        protected virtual void OnPropertyChanged(PropertyChangedEventArgs args) {
-            PropertyChanged?.Invoke(this, args);
-        }
+    private void OnPropertyChanged(PropertyChangedEventArgs args) {
+        PropertyChanged?.Invoke(this, args);
     }
 }

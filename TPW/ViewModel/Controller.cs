@@ -2,49 +2,44 @@
 using System.Windows.Input;
 using Model;
 
-namespace ViewModel {
-    public class Controller {
-        public Controller() {
-            BallNum = 1;
+namespace ViewModel; 
 
-            OnButtonStop = new ButtonAction(() => {
-                if ( _model == null ) return;
+public class Controller {
+    public Controller() {
+        BallNum = 1;
 
-                Circles.Clear();
-                _model.Stop();
-            });
-            OnButtonPauseResume = new ButtonAction(() => {
-                if ( _model == null ) return;
+        OnButtonStop = new ButtonAction(() => {
+            if ( _modelApi == null ) return;
 
-                _model.Enabled = !_model.Enabled;
-            });
-            OnButtonStart = new ButtonAction(() => {
-                if ( _model != null ) {
-                    OnButtonStop.Execute(null);
-                }
+            Circles.Clear();
+            _modelApi.Stop();
+        });
+        OnButtonPauseResume = new ButtonAction(() => {
+            if ( _modelApi == null ) return;
 
-                _model = new Model.Model(BallNum, 680, 500);
+            _modelApi.Enabled = !_modelApi.Enabled;
+        });
+        OnButtonStart = new ButtonAction(() => {
+            if ( _modelApi != null ) {
+                OnButtonStop.Execute(null);
+            }
 
-                foreach ( var circle in _model.Circles ) {
-                    Circles.Add(circle);
-                }
-                _model.Start();
-            });
+            _modelApi = AbstractModelApi.CreateApi(680, 500, BallNum, 15);
 
+            foreach (var circle in _modelApi.Circles) {
+                Circles.Add(circle);
+            }
 
-        }
-
-
-
-        public ICommand OnButtonStart { get; set; }
-        public ICommand OnButtonPauseResume { get; set; }
-        public ICommand OnButtonStop { get; set; }
-
-        public int BallNum { get; set; }
-        private Model.Model? _model;
-
-        public ObservableCollection<Circle> Circles { get; set; } = new();
-
+            _modelApi.Start();
+        });
     }
 
+    public ICommand OnButtonStart { get; set; }
+    public ICommand OnButtonPauseResume { get; set; }
+    public ICommand OnButtonStop { get; set; }
+
+    public int BallNum { get; set; }
+    private AbstractModelApi? _modelApi;
+
+    public ObservableCollection<Circle> Circles { get; set; } = new();
 }

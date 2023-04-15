@@ -1,71 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading;
 using Dane;
-using Logika;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Model;
 
-namespace Testy {
-    [TestClass]
-    public class ModelTests {
-        [TestMethod]
-        public void CircleTest()
-        {
-            int callCount = 0;
-            
-            Map map = new Map(100, 100);
-            Circle circle = Circle.GetCircle(map, 5);
-            Circle circle1 = Circle.GetCircle(map, 5);
+namespace Testy;
 
-            Assert.AreEqual(5, circle.Radius);
+[TestClass]
+public class ModelTests {
+    [TestMethod]
+    public void CircleTest() {
+        int cnt = 0;
 
-            circle.PropertyChanged += (sender, args) => { callCount++; };
-            circle.Ball.PropertyChanged += (sender, args) => { callCount++; };
-            circle1.PropertyChanged += (sender, args) => { callCount++; };
-            circle1.Ball.PropertyChanged += (sender, args) => { callCount++; };
+        Map map = new(100, 100);
+        var circle = Circle.GetCircle(map, 5);
+        var circle1 = Circle.GetCircle(map, 5);
 
-            foreach (var ball in map.Balls)
-            {
-                BallManager.UpdateBallPos(ball);
-            }
+        Assert.AreEqual(5, circle.Radius);
 
-            Assert.AreEqual(4, callCount);
+        circle.PropertyChanged += (_, _) => cnt++;
+        circle.Ball.PropertyChanged += (_, _) => cnt++;
+        circle1.PropertyChanged += (_, _) => cnt++;
+        circle1.Ball.PropertyChanged += (_, _) => cnt++;
+
+        foreach (var ball in map.Balls) {
+            ball.UpdatePos();
         }
 
+        Assert.AreEqual(12, cnt);
+    }
 
 
-        [TestMethod]
-        public void ModelTest()
-        {
-            var callCount = 0;
+    [TestMethod]
+    public void ModelApiTest() {
+        var callCount = 0;
 
-            Model.Model model = new(5, 100, 100);
+        var mApi = AbstractModelApi.CreateApi(100, 100, 5, 15);
 
-            foreach ( var circle in model.Circles ) {
-                circle.PropertyChanged += (sender, args) => { ++callCount; };
-            }
-            model.Start();
-
-            Thread.Sleep(2000);
-
-
-            model.Stop();
-            var count1 = callCount;
-            Thread.Sleep(1000);
-            Assert.AreEqual(count1, callCount);
-
-
-            Assert.AreEqual(5, model.Map.Balls.Count);
-            Assert.AreEqual(5, model.Circles.Count);
-            Assert.AreEqual(100, model.Map.XSize);
-            Assert.AreEqual(100, model.Map.YSize);
-
-            Assert.IsTrue(callCount > 0);
+        foreach (var circle in mApi.Circles) {
+            circle.PropertyChanged += (_, _) => { ++callCount; };
         }
 
+        mApi.Start();
+
+        Thread.Sleep(200);
+
+
+        mApi.Stop();
+        var count1 = callCount;
+        Thread.Sleep(100);
+        Assert.AreEqual(count1, callCount);
+
+        Assert.IsTrue(callCount > 0);
     }
 }

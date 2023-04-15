@@ -1,25 +1,22 @@
 ﻿using System.Windows.Input;
 
-namespace ViewModel {
-    public class ButtonAction : ICommand {
-        private readonly Action _action;
+namespace ViewModel;
 
-        public ButtonAction(Action executeAction) {
-            _action = executeAction;
-        }
+public sealed class ButtonAction : ICommand {
+    private readonly Action _action;
 
-        public bool CanExecute(object? parameter) => true;
+    public ButtonAction(Action executeAction) {
+        _action = executeAction;
+    }
 
-        public void Execute(object? parameter) => _action();
+    public bool CanExecute(object? parameter) => true;
 
-
-
+    public void Execute(object? parameter) => _action();
 
 
-        public event EventHandler? CanExecuteChanged;
+    public event EventHandler? CanExecuteChanged;
 
-        protected virtual void OnCanExecuteChanged() {
-            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
-        }
+    private void OnCanExecuteChanged() {
+        CanExecuteChanged?.Invoke(this, EventArgs.Empty);
     }
 }
