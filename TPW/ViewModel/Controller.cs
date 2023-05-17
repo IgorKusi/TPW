@@ -24,7 +24,7 @@ public class Controller {
                 OnButtonStop.Execute(null);
             }
 
-            _modelApi = AbstractModelApi.CreateApi(680, 500, BallNum, 15);
+            _modelApi = AbstractModelApi.CreateApi(680, 480, BallNum, 15);
 
             foreach (var circle in _modelApi.Circles) {
                 Circles.Add(circle);

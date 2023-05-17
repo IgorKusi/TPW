@@ -39,6 +39,10 @@ public abstract class AbstractLogikaApi {
 
         public ConcreteLogikaApi(int xSize, int ySize, int numBalls, int ballRadius, AbstractDaneApi? dApi = null) {
             _dApi = dApi ?? AbstractDaneApi.CreateApi();
+            
+            _dApi.BallCollision += BallManager.HandleBallCollision;
+            _dApi.WallCollision += BallManager.HandleWallCollision;
+            
             _dApi.MakeMap(xSize, ySize);
             Debug.Assert(_dApi.Map != null);
 

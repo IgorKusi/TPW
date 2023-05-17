@@ -1,4 +1,6 @@
-﻿namespace Dane; 
+﻿using System.ComponentModel;
+
+namespace Dane; 
 
 public abstract class AbstractDaneApi {
     public abstract void MakeMap(int xSize, int ySize);
@@ -8,12 +10,25 @@ public abstract class AbstractDaneApi {
     public abstract int GetMapYSize();
     public abstract Map? Map { get; set; }
 
+    public event EventHandler<CollisionEventArgs>? WallCollision;
+    public event EventHandler<CollisionEventArgs>? BallCollision;
+
     public static AbstractDaneApi CreateApi() {
         return new ConcreteDaneApi();
     }
 
     private sealed class ConcreteDaneApi : AbstractDaneApi {
-        public override Map? Map { get; set; }
+        private Map? _map;
+
+        public override Map? Map {
+            get => _map;
+            set {
+                _map = value;
+                if (_map == null) return;
+                _map.WallCollision += WallCollision;
+                _map.BallCollision += BallCollision;
+            }
+        }
 
         public override void MakeMap(int xSize, int ySize) {
             Map = new Map(xSize, ySize);

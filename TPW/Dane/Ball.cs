@@ -3,14 +3,16 @@
 namespace Dane; 
 
 public class Ball : INotifyPropertyChanged {
-    private int _r;
+    private int _id,
+                    _r;
 
     private double _x,
                     _y,
                     _xsp,
                     _ysp;
 
-    public Ball(double x, double y, int radius, double xSpeed, double ySpeed) {
+    public Ball(int id, double x, double y, int radius, double xSpeed, double ySpeed) {
+        _id = id;
         X = x;
         Y = y;
         Radius = radius;
@@ -18,6 +20,10 @@ public class Ball : INotifyPropertyChanged {
         YSpeed = ySpeed;
     }
 
+    
+    public int Mass => 5;
+
+    public int Id => _id;
 
     public double X {
         get => _x;
@@ -63,6 +69,15 @@ public class Ball : INotifyPropertyChanged {
         X += XSpeed;
         Y += YSpeed;
         OnPropertyChanged("pos");
+    }
+
+    public bool IsColliding(Ball withOther) {
+        double dist = Math.Sqrt(Math.Pow(withOther.X - X, 2) +
+                               Math.Pow(withOther.Y - Y, 2));
+        if (
+            dist <= Radius + withOther.Radius
+        ) return true;
+        return false;
     }
 
 

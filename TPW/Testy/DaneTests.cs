@@ -7,7 +7,7 @@ namespace Testy;
 public class DaneTests {
     [TestMethod]
     public void BallTest() {
-        Ball b = new(5, 5, 5, 4, -3);
+        Ball b = new(0, 5, 5, 5, 4, -3);
         int cnt = 0;
         b.PropertyChanged += (_, _) => cnt++;
         b.UpdatePos();
@@ -21,7 +21,7 @@ public class DaneTests {
     [TestMethod]
     public void MapTest() {
         Map map = new(100, 100);
-        map.AddBall(new Ball(5, 5, 5, 5, 5));
+        map.AddBall(new Ball(0, 5, 5, 5, 5, 5));
         Assert.AreEqual(100, map.XSize);
         Assert.AreEqual(100, map.YSize);
         Assert.AreEqual(1, map.Balls.Count);
@@ -31,7 +31,7 @@ public class DaneTests {
     public void DaneApiTest() {
         var dApi = AbstractDaneApi.CreateApi();
         dApi.MakeMap(100, 100);
-        dApi.AddBall(new Ball(5, 5, 5, 5, 5));
+        dApi.AddBall(new Ball(0, 5, 5, 5, 5, 5));
         Assert.AreEqual(100, dApi.GetMapXSize());
         Assert.AreEqual(100, dApi.GetMapYSize());
         Assert.AreEqual(1, dApi.GetBalls().Count);

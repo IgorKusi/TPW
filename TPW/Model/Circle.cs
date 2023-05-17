@@ -21,12 +21,12 @@ public sealed class Circle : INotifyPropertyChanged {
     public int Radius { get; }
 
     public double X {
-        get => Ball.X;
+        get => Ball.X - Ball.Radius;
         set => Ball.X = value;
     }
 
     public double Y {
-        get => Ball.Y;
+        get => Ball.Y - Ball.Radius;
         set => Ball.Y = value;
     }
 
