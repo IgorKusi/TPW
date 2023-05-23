@@ -75,7 +75,7 @@ public class Ball : INotifyPropertyChanged {
         double dist = Math.Sqrt(Math.Pow(withOther.X - X, 2) +
                                Math.Pow(withOther.Y - Y, 2));
         if (
-            dist <= Radius + withOther.Radius
+            dist <= Radius
         ) return true;
         return false;
     }

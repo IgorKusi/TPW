@@ -25,7 +25,7 @@ public static class BallManager {
         Ball ball = args.Ball1;
         Map map = args.Map;
 
-            
+
         lock (lck) {
             ball.X -= ball.XSpeed;
             ball.Y -= ball.YSpeed;
@@ -51,8 +51,6 @@ public static class BallManager {
 
         Ball ball1 = args.Ball1;
         Ball ball2 = args.Ball2;
-
-            
         lock (lck) {
             ball1.X -= ball1.XSpeed;
             ball1.Y -= ball1.YSpeed;
@@ -60,33 +58,63 @@ public static class BallManager {
             ball2.Y -= ball2.YSpeed;
 
             while ( !ball1.IsColliding(ball2) ) {
-                ball1.X += 1 * Math.Sign(ball1.XSpeed);
-                ball1.Y += 1 * Math.Sign(ball1.YSpeed);
-                ball2.X += 1 * Math.Sign(ball2.XSpeed);
-                ball2.Y += 1 * Math.Sign(ball2.YSpeed);
+                ball1.X += ball1.XSpeed / 10;
+                ball1.Y += ball1.YSpeed / 10;
+                ball2.X += ball2.XSpeed / 10;
+                ball2.Y += ball2.YSpeed / 10;
             }
-
+            
             ball1.X -= 2 * Math.Sign(ball1.XSpeed);
             ball1.Y -= 2 * Math.Sign(ball1.YSpeed);
             ball2.X -= 2 * Math.Sign(ball2.XSpeed);
             ball2.Y -= 2 * Math.Sign(ball2.YSpeed);
 
-            ball1.XSpeed =
-                (ball1.Mass * ball1.XSpeed + ball2.Mass * ball2.XSpeed +
-                 ball2.Mass * 1 * (ball2.XSpeed - ball1.XSpeed)) /
-                (ball1.Mass + ball2.Mass);
-            ball2.XSpeed =
-                (ball1.Mass * ball1.XSpeed + ball2.Mass * ball2.XSpeed +
-                 ball2.Mass * 1 * (ball1.XSpeed - ball2.XSpeed)) /
-                (ball1.Mass + ball2.Mass);
-            ball1.YSpeed =
-                (ball1.Mass * ball1.YSpeed + ball2.Mass * ball2.YSpeed +
-                 ball2.Mass * 1 * (ball2.YSpeed - ball1.YSpeed)) /
-                (ball1.Mass + ball2.Mass);
-            ball2.YSpeed =
-                (ball1.Mass * ball1.YSpeed + ball2.Mass * ball2.YSpeed +
-                 ball2.Mass * 1 * (ball1.YSpeed - ball2.YSpeed)) /
-                (ball1.Mass + ball2.Mass);
+
+            if ( ball1.XSpeed == 0 ) ball1.XSpeed += 0.0001;
+            if ( ball2.XSpeed == 0 ) ball2.XSpeed += 0.0001;
+            
+            double theta1 = Math.Atan(ball1.YSpeed / ball1.XSpeed);
+            double theta2 = Math.Atan(ball2.YSpeed / ball2.XSpeed);
+
+            if ( theta1 == 0 ) theta1 += 0.0001;
+            if ( theta2 == 0 ) theta2 += 0.0001;
+
+            double v1 = ball1.YSpeed / Math.Sin(theta1);//Math.Sqrt(ball1.YSpeed * ball1.YSpeed + ball1.XSpeed * ball1.XSpeed);
+            double v2 = ball2.YSpeed / Math.Sin(theta2);//Math.Sqrt(ball2.YSpeed * ball2.YSpeed + ball2.XSpeed * ball2.XSpeed);
+            
+            
+
+            double dOx = ball2.X - ball1.X;
+            double dOy = ball2.Y - ball1.Y;
+            double phi = Math.Atan(dOy / dOx);
+
+
+            float dM = ball2.Mass - ball1.Mass;
+
+            double v1fx = ( (v1 * Math.Cos(theta1 - phi) * (-dM) + 2 * ball2.Mass * v2 * Math.Cos(theta2 - phi)) /
+                            (ball1.Mass + ball2.Mass) ) * Math.Cos(phi) +
+                          v1 * Math.Sin(theta1 - phi) * Math.Cos(phi + Math.PI / 2);
+            double v1fy = ( (v1 * Math.Cos(theta1 - phi) * (-dM) + 2 * ball2.Mass * v2 * Math.Cos(theta2 - phi)) /
+                            (ball1.Mass + ball2.Mass) ) * Math.Sin(phi) +
+                          v1 * Math.Sin(theta1 - phi) * Math.Sin(phi + Math.PI / 2);
+            double v2fx = ( (v2 * Math.Cos(theta2 - phi) * dM + 2 * ball1.Mass * v1 * Math.Cos(theta1 - phi)) /
+                            (ball1.Mass + ball2.Mass) ) * Math.Cos(phi) +
+                          v2 * Math.Sin(theta2 - phi) * Math.Cos(phi + Math.PI / 2);
+            double v2fy = ( (v2 * Math.Cos(theta2 - phi) * dM + 2 * ball1.Mass * v1 * Math.Cos(theta1 - phi)) /
+                            (ball1.Mass + ball2.Mass) ) * Math.Sin(phi) +
+                          v2 * Math.Sin(theta2 - phi) * Math.Sin(phi + Math.PI / 2);
+
+            ball1.XSpeed = v1fx;
+            ball1.YSpeed = v1fy;
+            ball2.XSpeed = v2fx;
+            ball2.YSpeed = v2fy;
+
+            if ( double.IsNaN(ball1.XSpeed) || double.IsNaN(ball1.YSpeed) || double.IsNaN(ball2.XSpeed) ||
+                 double.IsNaN(ball2.YSpeed) ) {
+                var a = 3;
+            }
         }
+
+
     }
 }
