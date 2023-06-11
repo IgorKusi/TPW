@@ -21,7 +21,8 @@ public class Ball : INotifyPropertyChanged {
     }
 
     
-    public int Mass => 5;
+    private readonly int _mass = new Random().Next(1, 10);
+    public int Mass => _mass;
 
     public int Id => _id;
 

@@ -20,6 +20,7 @@ public abstract class AbstractLogikaApi {
         private readonly List<Thread> _threads = new();
         private readonly ManualResetEvent _mre = new(false);
         private readonly AbstractDaneApi _dApi;
+        private readonly Logger _logger;
 
 
         private bool _enabled;
@@ -38,6 +39,7 @@ public abstract class AbstractLogikaApi {
         }
 
         public ConcreteLogikaApi(int xSize, int ySize, int numBalls, int ballRadius, AbstractDaneApi? dApi = null) {
+            _logger = new Logger();
             _dApi = dApi ?? AbstractDaneApi.CreateApi();
             
             _dApi.BallCollision += BallManager.HandleBallCollision;
@@ -48,6 +50,10 @@ public abstract class AbstractLogikaApi {
 
             for (int i = 0; i < numBalls; i++) {
                 BallManager.GenerateBall(_dApi.Map, ballRadius);
+            }
+
+            foreach (var ball in _dApi.GetBalls()) {
+                ball.PropertyChanged += _logger.LogOnPropChanged;
             }
         }
 

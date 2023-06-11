@@ -109,12 +109,6 @@ public static class BallManager {
             ball2.XSpeed = v2fx;
             ball2.YSpeed = v2fy;
 
-            if ( double.IsNaN(ball1.XSpeed) || double.IsNaN(ball1.YSpeed) || double.IsNaN(ball2.XSpeed) ||
-                 double.IsNaN(ball2.YSpeed) ) {
-                var a = 3;
-            }
         }
-
-
     }
 }
