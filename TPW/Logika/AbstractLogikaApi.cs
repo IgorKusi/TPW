@@ -53,7 +53,7 @@ public abstract class AbstractLogikaApi {
             }
 
             foreach (var ball in _dApi.GetBalls()) {
-                ball.PropertyChanged += _logger.LogOnPropChanged;
+                ball.PropertyChanged += _logger.OnBallUpdate;
             }
         }
 
